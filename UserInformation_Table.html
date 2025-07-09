@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic HTML Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            transition: opacity 0.3s ease;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Basic HTML Table</h2>
+
+    <button onclick="toggleTable()">Show/Hide Table</button>
+
+    <table id="infoTable">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Rahul</td>
+            <td>28</td>
+            <td>Delhi</td>
+        </tr>
+        <tr>
+            <td>Vikas</td>
+            <td>32</td>
+            <td>Pune</td>
+        </tr>
+    </table>
+
+    
+    <script>
+        function toggleTable() {
+            const table = document.getElementById("infoTable");
+            if (table.style.display === "none") {
+                table.style.display = "table";
+            } else {
+                table.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
